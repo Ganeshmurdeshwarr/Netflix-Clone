@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const Player = () => {
   const { id } = useParams();
-  const [playerdata, setPlayerdata] = useState([]);
+  const [playerdata, setPlayerdata] = useState(null);
   const navigate =useNavigate()
   const apiKey = "00fe869b1a31942acf5c2b0e37527796";
 
@@ -29,7 +29,6 @@ const Player = () => {
     fetchdata();
   }, [id]);
  
-  console.log(playerdata)
  if (!playerdata) {
     return (
       <div className="h-screen w-screen bg-black flex justify-center items-center text-white">
@@ -52,7 +51,7 @@ const Player = () => {
         frameBorder="0"
       ></iframe>
 
-      <div className="flex w-[90%]  mt-2 justify-between items-center text-white text-sm md:text-xl">
+      <div className="flex md:flex-row flex-col gap-y-2 w-[90%]  mt-2 justify-between items-center text-white text-sm md:text-xl">
         <p>{playerdata.published_at?.slice(0,10) || 'N/A'}</p>
         <p>{playerdata.name || 'N/A'}</p>
         <p>{playerdata.type || 'N/A'}</p>

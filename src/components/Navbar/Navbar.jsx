@@ -13,15 +13,15 @@ const [scrolled, setScrolled] =useState(false)
 
 
 useEffect(()=>{
-    function hanndleScroll(){
+    function handleScroll(){
         setScrolled(window.scrollY > 20) 
     }
-    window.addEventListener('scroll', hanndleScroll)
-  return ()=>window.removeEventListener('scroll', hanndleScroll)
-})
+    window.addEventListener('scroll', handleScroll)
+  return ()=>window.removeEventListener('scroll', handleScroll)
+},[])
 
   return (
-    <header className={`w-[100%] py-10 md:py-[20px] px-[6%] tracking-wider flex flex-row  justify-between items-center fixed text-2xl md:text-[14px] text-white ${scrolled? 'bg-black text-white z-10 font-bold':'bg-gradient-to-b from-black/70 to-transparent z-10 font-bold '}       `}>
+    <header className={`w-[100%] py-10 md:py-[20px] px-[6%] tracking-wider flex flex-row  justify-between items-center fixed text-2xl md:text-[14px] text-white ${scrolled? 'bg-black text-white z-10 font-bold':'bg-gradient-to-b from-black/70 to-transparent z-10 font-bold '}`}>
 
         <div className=' flex gap-x-10 items-center  '>
             <img className='w-40 md:w-28 md:h-8' src={logo} alt="Netflix-logo" />
@@ -43,7 +43,7 @@ useEffect(()=>{
                 <img className='w-6 md:w-2' src={caret_icon} alt="" />
                 <div className='hidden group-hover:block absolute w-max  bg-gray-800 z-10 decoration-0 bottom-[-110%] right-0 px-2 py-2
                  text-xl'>
-                    <p onClick={()=>logout()} className='text-[13px] cursor-pointer'>Sing Out of Netflix</p>
+                    <button onClick={()=>logout()} className='text-[13px] cursor-pointer'>Sing Out of Netflix</button>
                 </div>
             </div>
 

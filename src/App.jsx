@@ -12,20 +12,21 @@ const App = () => {
   const navigate =useNavigate()
 
   useEffect(()=>{
-    onAuthStateChanged(auth , async (user)=>{
+   const unsubscribe = onAuthStateChanged(auth ,  (user)=>{
       if(user){
-        console.log('Loggeg In')
+        console.log('Logged In')
         navigate('/')
       }else{
-        console.log('Loggeg Out')
+        console.log('Logged Out')
         navigate('/login')
         
       }
     })
-  },[])
+    return ()=> unsubscribe();
+  },[navigate])
 
   return (
-    <div>
+    <div className='w-full'>
       <ToastContainer theme='dark' />
     <Routes>
       <Route path='/' element={<Home/>}/>

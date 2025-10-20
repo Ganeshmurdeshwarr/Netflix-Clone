@@ -12,17 +12,19 @@ import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   return (
-    <div className="w-[100vh]   md:w-[100%]">
+       
+
+    <div className="w-full   md:w-[100%]">
       <Navbar />
-      <div className=" relative ">
-        <img className=" w-[100%] md:w-[100%]  " src={hero_banner} alt="" />
-        <div className="absolute bottom-0 md:bottom-50 pl-[6%]">
+      <div className=" relative w-[800px] max-w-[1100px] md:w-full">
+        <img className=" w-full md:w-[100%]  " src={hero_banner} alt="" />
+        <div className="absolute bottom-2 md:bottom-10 pl-[6%]">
           <img
-            className="mb-8 w-[80%] max-w-[400px] md:w-[90%] md:max-w-[420px] brightness-150 "
+            className="mb-8 w-[60%] max-w-[300px] md:w-[90%] md:max-w-[420px] brightness-125 "
             src={hero_title}
             alt=""
           />
-          <p className="md:w-[700px] w-[400px] md:text-xl text-xl">
+          <p className="w-[80%] md:w-[50%] text-xl">
             Discovering his ties to a secret ancient order, a man living in
             morden Istanbul embark on a quest to save the city from an immortal
             enemy.
@@ -40,15 +42,16 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="px-[6%] mt-10">
+      <div className="w-[800px] mx-w-[1100px] md:w-full  px-[6%] mt-10">
       <TitleCards  />
       <TitleCards title={'Blockbuster Movies'} category={'top_rated'}/>
-      <TitleCards title={'Only on Netfix'} category={'popular'}/>
+      <TitleCards title={'Only on Netflix'} category={'popular'}/>
       <TitleCards title={'Upcoming'} category={'upcoming'}/>
       <TitleCards title={'Top Pics for You'} category={'now_playing'}/>
       </div>
       <Footer/>
     </div>
+  
   );
 };
 
