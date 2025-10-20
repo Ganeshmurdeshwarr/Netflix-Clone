@@ -49,20 +49,20 @@ const TitleCards = ({ title, category }) => {
 
       <div
         ref={cardRef}
-        className="w-full flex   gap-x-3 overflow-x-scroll scrollbar-hide flex-nowrap "
+        className="w-full flex   md:gap-x-3 gap-x-2 overflow-x-scroll scrollbar-hide flex-nowrap "
       >
         {movies.map((item) => (
           <Link
             to={`/player/${item.id}`}
             key={item.id}
-            className="md:w-[240px] w-[350px] h-[250px] md:h-auto relative flex-shrink-0"
+            className="md:w-[240px] w-[180px] h-[100px] md:h-auto relative flex-shrink-0"
           >
             <img
               src={`https://image.tmdb.org/t/p/w500` + item.backdrop_path}
               alt={item.original_title || ''}
-              className="rounded-lg md:h-auto h-[250px]"
+              className="rounded-lg md:h-auto h-full"
             />
-            <h2 className="mt-3 text-xl font-semibold absolute bottom-3 right-3">
+            <h2 className="mt-3 md:text-xl text:sm font-semibold absolute bottom-3 right-3">
               {item.original_title}
             </h2>
           </Link>

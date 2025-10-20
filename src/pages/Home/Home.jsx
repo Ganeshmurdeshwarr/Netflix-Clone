@@ -42,7 +42,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="w-[900px] mx-w-[1100px] md:w-full  px-[6%] mt-10">
+      <div className="w-full  px-[6%] mt-10">
       <TitleCards  />
       <TitleCards title={'Blockbuster Movies'} category={'top_rated'}/>
       <TitleCards title={'Only on Netflix'} category={'popular'}/>
