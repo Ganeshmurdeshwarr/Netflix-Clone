@@ -3,6 +3,7 @@ import './Login.css'
 import logo from "../../assets/logo.png";
 import { login, signup } from "../../firebase";
 import netflix_spinner from '../../assets/netflix_spinner.gif'
+import bg_Image from '../../assets/background_banner.jpg'
 
 const Login = () => {
 
@@ -36,7 +37,10 @@ function handleSingPage(){
     loading? <div className="w-screen h-screen flex justify-center items-center  "> <img className="w-[100px]" src={netflix_spinner} alt="" /></div>:
 
     // login
-    <div className="relative h-screen w-screen bgImage bg-cover bg-center">
+    <div className="relative h-screen w-screen  bg-cover bg-center" 
+     style={{
+    backgroundImage: `linear-gradient(#0000007e, #0000007e), url(${bg_Image})`
+  }}>
       <div className="w-full md:block flex justify-center pt-10 ">
         <img className="  w-[100px] md:ml-16 md:pt-8    " src={logo} alt="" />
       </div>
@@ -44,13 +48,14 @@ function handleSingPage(){
         {singInPage?<h1 className="text-xl font-bold">Sing In </h1>:<h1 className="text-xl font-bold">Sing Up </h1>}
 
       { singInPage ?  (<form onSubmit={user_auth}>
-          <input 
+          <input value={email} onChange={(e)=>setEmail(e.target.value)}
             className="w-full bg-gray-800  mt-8 px-2 py-2 placeholder:text-white rounded-[5px] "
             type="email"
             placeholder="Enter your Email "
             required
           />
-          <input
+          <input value={password} 
+              onChange={(e)=>setPassword(e.target.value)}
             className="w-full bg-gray-800  mt-5 px-2 py-2 placeholder:text-white rounded-[5px] "
             type="password"
             placeholder="Enter your Password"
