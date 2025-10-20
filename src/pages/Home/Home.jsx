@@ -14,10 +14,10 @@ const Home = () => {
   return (
        
 
-    <div className="w-full   md:w-[100%]">
+    <div className="w-full ">
       <Navbar />
-      <div className=" relative w-[900px] max-w-[1100px] md:w-screen md:max-w-full">
-        <img className=" w-full md:w-[100%]  " src={hero_banner} alt="" />
+      <div className=" relative  w-screen">
+        <img className=" w-full  " src={hero_banner} alt="" />
         <div className="absolute bottom-2 md:bottom-10 pl-[6%]">
           <img
             className="mb-8 w-[60%] max-w-[300px] md:w-[90%] md:max-w-[420px] brightness-125 "
