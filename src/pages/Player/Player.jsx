@@ -16,7 +16,6 @@ const Player = () => {
           `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${apiKey}&language=en-US`
         );
         const json = await res.json();
-        console.log(json.results)
         if (json.results && json.results.length > 0) {
           setPlayerdata(json.results[0]);
         } else {

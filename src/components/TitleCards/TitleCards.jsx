@@ -53,7 +53,7 @@ const TitleCards = ({ title, category }) => {
       >
         {movies.map((item) => (
           <Link
-            to={`/Player/${item.id}`}
+            to={`/player/${item.id}`}
             key={item.id}
             className="md:w-[240px] w-[350px] h-[250px] md:h-auto relative flex-shrink-0"
           >
