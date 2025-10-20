@@ -8,9 +8,12 @@ import { logout } from '../../firebase'
 
 
 const Navbar = () => {
-
+const [logoutBtn , setLogOutBtn] =useState(false)
 const [scrolled, setScrolled] =useState(false)
 
+function handlelogOutbtn(){
+    setLogOutBtn(prev => !prev)
+}
 
 useEffect(()=>{
     function handleScroll(){
@@ -38,11 +41,10 @@ useEffect(()=>{
             <img className='w-10 md:w-5' src={search} alt="" />
             <p className='font-bold'>Children</p>
             <img className='w-10 md:w-5' src={bell_icon} alt="" />
-            <div className='group relative flex cursor-pointer gap-x-3 md:gap-x-1 '>
+            <div onClick={handlelogOutbtn} className='group relative flex cursor-pointer gap-x-3 md:gap-x-1 '>
                 <img className='w-12 md:w-8 rounded-md' src={profile_icon} alt="" />
                 <img className='w-6 md:w-2' src={caret_icon} alt="" />
-                <div className='hidden group-hover:block absolute w-max  bg-gray-800 z-10 decoration-0 bottom-[-110%] right-0 px-2 py-2
-                 text-xl'>
+                <div className={`md:hidden md:group-hover:block absolute w-max  bg-gray-800 z-10 decoration-0 bottom-[-110%] right-0 px-2 py-2 md:text-xl text-xl ${logoutBtn ? 'block':'hidden'}`}>
                     <button onClick={()=>logout()} className='text-[13px] cursor-pointer'>Sing Out of Netflix</button>
                 </div>
             </div>
