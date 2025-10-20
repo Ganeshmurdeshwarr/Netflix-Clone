@@ -6,7 +6,7 @@ import insta from '../../assets/instagram_icon.png'
 
 const Footer = () => {
   return (
-    <footer className='mt-20 md:px-[20%] ml-16 md:ml-0 pb-20  h-full md:p-10 w-full md:w-[100%] '>
+    <footer className='mt-20 md:px-[20%] ml-16 md:ml-0 pb-20  h-full md:p-10 w-[800px] md:w-[100%] '>
         <div className='flex w-[50px] md:w-[30px] md:gap-x-4 gap-x-8  '>
             <img  src={facebook} alt="facebook_icon" />
             <img src={youtube} alt="youtub_icon" />
@@ -14,7 +14,7 @@ const Footer = () => {
             <img src={twitter} alt="twitter_icon" />
         </div>
         <div className=''>
-           <ul className='grid grid-cols-2 text-xl md:text-sm md:grid-cols-4 gap-y-4  mt-10 font-semibold'>
+           <ul className='grid grid-cols-2 m-auto text-xl md:text-sm md:grid-cols-4 gap-y-4 gap-x-15  mt-10 font-semibold'>
             <li>Audio Description</li>
             <li>Help Centre</li>
             <li>Gift Cards</li>
