@@ -42,7 +42,7 @@ const TitleCards = ({ title, category }) => {
   }, []);
 
   return ( 
-    <div className=" md:mb-8 mb-14">
+    <div className=" md:mb-8 mb-6">
       <h2 className="md:text-lg text-2xl font-bold mb-5 ">
         {title ? title : "Popular on Netflix"}
       </h2>

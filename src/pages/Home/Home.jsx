@@ -31,11 +31,11 @@ const Home = () => {
           </p>
 
           <div className="flex gap-x-4 md:mb-8 mb-4 mt-2 md:mt-10">
-            <button className="bg-white text-black hover:bg-gray-400 transition-colors duration-500 flex items-center gap-x-3 w-fit  h-10 md:h-auto  md:px-4 md:py-2 px-2 py-2 md:mt-10  font-bold rounded-[5px] text-[10px] md:text-xl ">
+            <button className="bg-white text-black hover:bg-gray-400 transition-colors duration-500 flex items-center md:gap-x-3 gap-x-1 w-fit  h-10 md:h-auto  md:px-4 md:py-2 px-2 py-2 md:mt-10  font-bold rounded-[5px] text-[10px] md:text-xl ">
               <img className="md:w-5 w-[15px] h-[15px] md:h-auto " src={play_icon} alt="" />
               Play
             </button>
-            <button className="bg-gray-700 text-white transition-colors duration-500 hover:bg-gray-500 flex items-center gap-x-3 w-fit h-10 md:h-auto md:px-4 md:py-2 px-2 py-2 md:mt-10 font-bold rounded-[5px] text-[10px] md:text-xl">
+            <button className="bg-gray-700 text-white transition-colors duration-500 hover:bg-gray-500 flex items-center md:gap-x-3 gap-x-1 w-fit h-10 md:h-auto md:px-4 md:py-2 px-2 py-2 md:mt-10 font-bold rounded-[5px] text-[10px] md:text-xl">
               <img className="md:w-5 w-[15px] h-[15px] md:h-auto " src={info_icon} alt="" />
               More info
             </button>
