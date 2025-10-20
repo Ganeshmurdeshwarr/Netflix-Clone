@@ -8,10 +8,12 @@
 
 body {
   width: 100%;
-
   background-color: black;
   color: white;
   font-family: "Poppins";
+  touch-action: manipulation;
+  zoom: reset;
+  overflow-x: hidden
 }
 
 .scrollbar-hide::-webkit-scrollbar {
